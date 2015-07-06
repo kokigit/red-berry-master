@@ -13,4 +13,11 @@ public class HelloController {
 		model.addAttribute("message", "Hello world!");
 		return "hello";
 	}
+
+
+    @RequestMapping(method = RequestMethod.GET,value = "/api")
+    public String api(ModelMap model) {
+        model.addAttribute("message", "hello api!");
+        return "hello";
+    }
 }
